@@ -1,0 +1,32 @@
+<?php View::content(); ?>
+<h3>Crear Nuevo Cliente<h3>
+ 
+<?php echo Form::open(); // por defecto llama a la misma url ?>
+ <div class="span6">
+        <label>Tipo Cliente
+        <?php $tipo = array('V','E','J','G');
+		echo Form::select('clientes.tipo_fiscal',$tipo) ?></label>
+ 
+        <label>Cedula/RIF
+        <?php echo Form::text('clientes.identificacion') ?></label>
+        
+        <label>Nombres
+        <?php echo Form::text('clientes.nombres') ?></label>
+        
+</div>
+<div class="span6">
+        
+        <label>Apellidos
+        <?php echo Form::text('clientes.apellidos') ?></label>
+        
+        <label>Direccion
+        <?php echo Form::text('clientes.direccion') ?></label>
+        
+        <label>Telefono
+        <?php echo Form::text('clientes.telefono') ?></label>
+        
+</div>
+ 
+        <?php echo Form::submit('Agregar') ?>
+ 
+<?php echo Form::close() ?>

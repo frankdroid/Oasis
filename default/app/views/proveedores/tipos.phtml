@@ -1,0 +1,36 @@
+<div class="span12">
+	<h2>Tipos de Proveedores</h2>
+</div>
+
+<div class="span12"><?php View::content(); ?><br></div>
+
+    <div class="span2">&nbsp;</div>
+    
+    <?php echo Form::open(); // por defecto llama a la misma url ?>
+    
+    <div class="span5">
+        
+        <label>Tipo de Proveedor
+            <?php echo Form::text('tipo_doc') ?></label>
+     
+            <label>Descripción
+            <?php echo Form::pass('descripcion') ?></label>
+            
+            <label>Prefijo
+            <?php echo Form::text('prefijo') ?></label>
+            
+            <label>Comentario
+            <?php echo Form::textarea('comentario','rows=5') ?></label>
+            
+    </div>
+    
+    <div class="span3">
+            <label>Clientes Registrados
+            <textarea name="docs" rows="10" readonly id="docs"></textarea></label>
+    </div>       
+    
+    <div class="span2">&nbsp;</div>
+
+<div class="span12" style="text-align:center"><?php echo Form::submit('Agregar','class="btn btn-primary"') ?></div>
+        
+<?php echo Form::close() ?> 
